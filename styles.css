@@ -1,5 +1,7 @@
 /* 
+---------------------------------------------------
 Farver på hjemmesiden
+---------------------------------------------------
 */
 :root {
     /* Primær farver */
@@ -15,7 +17,11 @@ Farver på hjemmesiden
 
 }
 
-/* Reset */
+/* 
+---------------------------------------------------
+Reset
+---------------------------------------------------
+*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,13 +29,14 @@ Farver på hjemmesiden
     text-decoration: none;
     list-style: none;
     color: var(--råHvid);
+    /* Sæt en baggrundsfarve, så jeg ved om jeg har nogle huller i mit layout */
 }
 
-body {
-    
-}
-
-/* Navigations linjen */
+/* 
+---------------------------------------------------
+Navigations linjen
+---------------------------------------------------
+*/
 
 .main-nav {
     display: flex;
@@ -88,14 +95,22 @@ body {
     transform: translateX(0%);
 }
 
-/* Main */
+/* 
+---------------------------------------------------
+Main
+---------------------------------------------------
+*/
 
 main {
     font-family: 'Shanti', sans-serif;
     background: var(--sort);
 }
 
-/* Overskifter */
+/* 
+---------------------------------------------------
+Overskifter
+---------------------------------------------------
+ */
 h1 {
     font-family: 'Mulish', sans-serif;
     text-transform: uppercase;
@@ -108,17 +123,19 @@ h2 {
 }
 
 
-/* FORSIDE */
+/* 
+---------------------------------------------------
+FORSIDE 
+---------------------------------------------------
+*/
 
 /* Første del af Forside */
-
 .ground{
     font-size: 26px;
     display: flex;
     float: none;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
 }
 
 .frontPicture {
@@ -127,6 +144,7 @@ h2 {
     max-height: 800px;
     border-bottom-right-radius: 3px;
 }
+
 .left {
     width: 50%;
     min-height: 50vh;
@@ -164,9 +182,41 @@ h2 {
     align-items: center;
 }
 
+.forsideBillede {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* 
+---------------------------------------------------
+TrølleØllene - Side 1 
+---------------------------------------------------
+*/
 
 
-/* TrølleØllene - Side 1 */
+
+/* 
+---------------------------------------------------
+Øllene
+---------------------------------------------------
+*/
+
+
+
+/* 
+---------------------------------------------------
+Fremtidige Projekter
+---------------------------------------------------
+*/
+
+
+
+
+/* 
+---------------------------------------------------
+Historien bag Trøjborg Bryg
+---------------------------------------------------
+*/
 
 
 /* Buttons */
@@ -200,8 +250,11 @@ h2 {
 }
 
 
-/* Footer */
-
+/* 
+---------------------------------------------------
+Footer
+---------------------------------------------------
+*/
 footer {
     background: var(--Brun);
     padding: 20px 0;
@@ -228,26 +281,52 @@ footer {
 }
 
 .social_media a {
-    font-size: 24px;
+    font-size: 30px;
     text-decoration: none;
+    color: var(--råHvid);
     transition: .3s;
-    
+}
+
+.social_media a:hover .fab{
+    color: var(--Darkblue);
 }
 
 
 
-/* MEDIA QUARY */
+/* 
+---------------------------------------------------
+MEDIA QUARY
+---------------------------------------------------
+*/
 
 
-
+/* 
+--------------------------
+Desktop layout
+--------------------------
+*/
 @media screen and (min-width: 1275px) {
+/*
+-------------
+Navigationslinjen
+-------------
+*/
     .nav-links {
         width: 60%;
     }
 }
 
+/* 
+--------------------------
+Tablet Layout
+--------------------------
+*/
 @media screen and (max-width: 1274px){
-    /* Navigationslinjen */
+/*
+-------------
+Navigationslinjen
+-------------
+*/
     .burger {
         display: block;
     }
@@ -272,28 +351,49 @@ footer {
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
     }
 
-    /* Forside Øverste del */
+/* 
+-------------
+Forside Øverste del
+-------------
+*/
     .ground, .water {
         font-size: 16px;
         text-align: center;
     }
 
-    
+    .water {
+        min-height: 0;
+    }
 
+    .text {
+        padding: 0 10px;
+    }
+
+    .left {
+        min-height: 35vh;
+    }
+
+    .right{
+        min-height: 35vh;
+    }
 }
 
-@media screen and (min-width: 750px) and (max-width: 1274px) {
-    
-}
-
-
+/*
+--------------------------
+Mobil Loyout
+--------------------------
+ */
 @media screen and (max-width: 400px) {
 
     .nav-links {
         width: 80%;
     }
 
-/* Main */
+/* 
+-------------
+Main 
+-------------
+*/
 
 .left {
     width: 100%;
@@ -303,11 +403,27 @@ footer {
     width: 100%;
 }
 
-/* Forside - Øverste del */
+/* 
+-------------
+Forside - Øverste del 
+-------------
+*/
     .ground {
         flex-direction: column-reverse;
     }
     
+    .forsideBillede {
+        display: none;
+    }
+
+    .left {
+        min-height: 0;
+    }
+
+    .right{
+        min-height: 0;
+    }
+
     .water {
         flex-direction: column;
     }
@@ -315,12 +431,17 @@ footer {
     .ftpDel {
         flex-direction: column-reverse;
     }
+    
 
     .text {
         height: 400px;
     }
 
-    /* Footeren */
+/*
+-------------
+Footer
+-------------
+*/
     .footer_container {
         justify-content: center;
     }
@@ -328,6 +449,4 @@ footer {
     .social_media {
         gap: 5rem;
     }
-
-
 }
