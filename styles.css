@@ -104,6 +104,7 @@ Main
 main {
     font-family: 'Shanti', sans-serif;
     background: var(--sort);
+    text-align: center;
 }
 
 /* 
@@ -123,6 +124,8 @@ h2 {
 }
 
 
+
+
 /* 
 ---------------------------------------------------
 FORSIDE 
@@ -138,16 +141,29 @@ FORSIDE
     align-items: center;
 }
 
+.ground p  {
+    font-size: 18px;
+}
+
+.forsideVideo {
+    width: 90%;
+    border-radius: 3px;
+}
+
+
+
 .frontPicture {
     width: 100%;
-    max-width: 800px;
-    max-height: 800px;
-    border-bottom-right-radius: 3px;
+    max-width: 900px;
+    max-height: 900px;
+    border-radius: 3px;
 }
 
 .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
-    min-height: 50vh;
 }
 
 .text {
@@ -156,24 +172,35 @@ FORSIDE
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 5vh;
 }
 
 .right {
     width: 50%;
-    min-height: 50vh;
 }
+
+/* .startText {
+    padding: 50px;
+} */
 
 /* Anden del af forsiden */
 .water {
     font-size: 20px;
-    min-height: 70vh;
     display: flex;
+}
+
+.water > .left, .right {
+    min-height: 10vh;
 }
 
 .water img {
     width: 100%;
     max-width: 800px;
     border-radius: 3px;
+}
+
+.BGBrun {
+    background: var(--Brun);
 }
 
 .billedeFormat {
@@ -192,7 +219,51 @@ FORSIDE
 TrølleØllene - Side 1 
 ---------------------------------------------------
 */
+#tøIndhold {
+    width: 100%;
+    min-height: 400px;
+}
 
+.tøTopIndhold video {
+    height: 96.8%;
+    width: 100%;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    z-index: 0;
+    opacity: .4;
+}
+
+.tøTopIndhold div {
+    z-index: 1;
+}
+
+.direction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    width: auto;
+    gap: 1em;
+    margin-bottom: 17px;
+    margin-top: 17px;
+}
+
+.direction:last-child {
+    margin-bottom: 0;
+}
+
+.boxPicture {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.boxPicture img, .boxPicture video {
+    max-height: 350px;
+    width: 130%;
+}
 
 
 /* 
@@ -208,8 +279,13 @@ TrølleØllene - Side 1
 Fremtidige Projekter
 ---------------------------------------------------
 */
+#ftpPage {
+}
 
-
+.headline {
+    padding-top: 50px;
+    font-size: 150%;
+}
 
 
 /* 
@@ -219,8 +295,11 @@ Historien bag Trøjborg Bryg
 */
 
 
-/* Buttons */
-
+/*
+---------------------------------------------------
+Buttons
+---------------------------------------------------
+*/
 .button {
     width: fit-content;
     padding: 10px;
@@ -249,6 +328,16 @@ Historien bag Trøjborg Bryg
     border: solid 2px var(--Darkblue);
 }
 
+.textLink {
+    color: var(--Brun);
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.textLink:hover {
+    color: var(--Gul);
+}
+
 
 /* 
 ---------------------------------------------------
@@ -265,13 +354,17 @@ footer {
     /* margin: auto; */
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap-reverse;
 }
 
 .logoFooter {
     width: 60px;
+}
+
+.logoBoxFooter {
+    width: 250px;
 }
 
 .social_media {
@@ -291,6 +384,9 @@ footer {
     color: var(--Darkblue);
 }
 
+.footerText {
+    width: 250px;
+}
 
 
 /* 
@@ -314,6 +410,12 @@ Navigationslinjen
     .nav-links {
         width: 60%;
     }
+
+    .ground > .left, .right {
+        min-height: 95vh;
+        height: auto;
+    }
+
 }
 
 /* 
@@ -361,6 +463,16 @@ Forside Øverste del
         text-align: center;
     }
 
+    .ground {
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+    }
+
+    .frontPicture {
+        border-radius: 0;        
+    }
+
     .water {
         min-height: 0;
     }
@@ -370,12 +482,82 @@ Forside Øverste del
     }
 
     .left {
-        min-height: 35vh;
+        min-height: 40vh;
     }
 
     .right{
-        min-height: 35vh;
+        min-height: 40vh;
     }
+
+/* 
+-------------
+Forside anden del
+-------------
+*/
+    .headline {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .empty {
+        width: 100%;
+    }
+    
+    .text {
+        width: 100%;
+    }
+
+/* 
+-------------
+TrølleØllene valg af øl
+-------------
+*/
+    #tøIndhold {
+        
+        }
+
+
+
+    .tøTopIndhold video {
+        height: 51%;
+        width: 100%;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .tøTopIndhold {
+        margin-bottom: 92px;
+    }
+
+    .direction {
+        gap: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        justify-content: center;
+        align-items: center;
+        min-height: 170px;
+    }
+
+    .direction a, .direction video{
+        height: 170px;
+    }
+
+    .boxPicture {
+        height: 170px;
+    }
+
+/* 
+-------------
+Footer
+-------------
+*/
+    .footerText, .logoBoxFooter {
+        width: 50%;
+        text-align: center;
+    }
+
 }
 
 /*
@@ -411,18 +593,6 @@ Forside - Øverste del
     .ground {
         flex-direction: column-reverse;
     }
-    
-    .forsideBillede {
-        display: none;
-    }
-
-    .left {
-        min-height: 0;
-    }
-
-    .right{
-        min-height: 0;
-    }
 
     .water {
         flex-direction: column;
@@ -434,7 +604,36 @@ Forside - Øverste del
     
 
     .text {
-        height: 400px;
+        min-height: 500px;
+    }
+
+/*
+-------------
+TrølleØllene
+-------------
+*/
+    .tøTopIndhold video {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+
+
+    .direction {
+        flex-direction: column;
+    }
+
+    .boxPicture {
+        width: 100%;
+    }
+
+    .boxPicture:nth-last-child(1) {
+        margin-bottom: 17px;
+    }
+
+    .boxPicture {
+        
     }
 
 /*
