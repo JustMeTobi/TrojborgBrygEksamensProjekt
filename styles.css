@@ -354,12 +354,12 @@ TrølleØllene - Side 1
     width: 50%;
     font-size: 18px;
     flex-direction: column;
-    padding: 0 100px;
+    padding: 30px 100px;
     background-color: var(--Brun);
     border-radius: 3px;
     align-items: flex-start;
     gap: 5px;
-    min-height: 300px;
+    min-height: 400px;
 }
 
 .ølBoxInfo {
