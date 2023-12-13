@@ -54,6 +54,25 @@ Navigations linjen
     margin-left: 20px;
 }
 
+.logo:hover {
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
 .nav-links {
     display: flex;
     width: 40%;
@@ -138,7 +157,7 @@ FORSIDE
 */
 
 /* Første del af Forside */
-.ground{
+.ground {
     font-size: 26px;
     display: flex;
     float: none;
@@ -146,7 +165,7 @@ FORSIDE
     align-items: center;
 }
 
-.ground p  {
+.ground p {
     font-size: 18px;
 }
 
@@ -175,16 +194,16 @@ FORSIDE
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 5vh;
+    padding: 15vh;
 }
 
 .right {
     width: 50%;
 }
 
-/* .startText {
+.startText {
     padding: 50px;
-} */
+} 
 
 /* Anden del af forsiden */
 .water {
@@ -192,7 +211,8 @@ FORSIDE
     display: flex;
 }
 
-.water > .left, .right {
+.water>.left,
+.right {
     min-height: 10vh;
 }
 
@@ -231,9 +251,10 @@ TrølleØllene - Side 1
 }
 
 .hoveringOver:hover {
-    opacity: .8;
     transition: .8s;
     scale: 1.1;
+    border: solid 3px var(--sort);
+    border-radius: 3px;
 }
 
 .tøTopIndhold video {
@@ -272,7 +293,8 @@ TrølleØllene - Side 1
     overflow: hidden;
 }
 
-.boxPicture img, .boxPicture video {
+.boxPicture img,
+.boxPicture video {
     max-height: 350px;
     width: 130%;
 }
@@ -281,6 +303,9 @@ TrølleØllene - Side 1
     opacity: .7;
 }
 
+.tøTopText {
+    width: 100%;
+}
 
 /* 
 ---------------------------------------------------
@@ -288,16 +313,84 @@ TrølleØllene - Side 1
 ---------------------------------------------------
 */
 
+.ølDel {
+    margin-top: 50px;
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+}
 
+.streg {
+    width: 30%;
+    height: 3px;
+    background: var(--Brun);
+}
+
+.ølLabelPicture {
+    width: 30%;
+    border-radius: 3px;
+    margin-top: 150px;
+}
+
+.leftØl {
+    width: 50%;
+    font-size: 18px;
+    padding: 0 50px;
+}
+.rightØl {
+    width: 50%;
+}
+
+.ølPicture {
+    border-radius: 3px;
+    width: 50%;
+}
+
+.ølBox {
+    display: flex;
+    width: 50%;
+    font-size: 18px;
+    flex-direction: column;
+    padding: 0 100px;
+    background-color: var(--Brun);
+    border-radius: 3px;
+    align-items: flex-start;
+    gap: 5px;
+    min-height: 300px;
+}
+
+.ølBoxInfo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+.ølBoxInfo h3 {
+    color: var(--Gul);
+}
+
+.middleSpace {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
 
 /* 
 ---------------------------------------------------
 Fremtidige Projekter
 ---------------------------------------------------
 */
-#ftpPage {
-}
 
+/* 
+-------------------------
+TrølleMock
+-------------------------
+*/
 
 
 
@@ -320,11 +413,11 @@ Buttons
     font-weight: bold;
 }
 
-.button:hover{
+.button:hover {
     color: #232323;
     background: var(--Gul);
     border: solid 2px var(--Gul);
-    
+
 }
 
 .buttonSpace {
@@ -336,7 +429,7 @@ Buttons
     font-size: 80%;
 }
 
-.btMain{
+.btMain {
     background: var(--Darkblue);
     border: solid 2px var(--Darkblue);
 }
@@ -398,9 +491,9 @@ footer {
     transition: .3s;
 }
 
-.social_media a:hover .fab{
+.social_media a:hover .fab {
     color: var(--Darkblue);
-    scale: 1.5; 
+    scale: 1.5;
     transition: .8s;
 }
 
@@ -422,7 +515,8 @@ Desktop layout
 --------------------------
 */
 @media screen and (min-width: 1275px) {
-/*
+
+    /*
 -------------
 Navigationslinjen
 -------------
@@ -431,9 +525,19 @@ Navigationslinjen
         width: 60%;
     }
 
-    .ground > .left, .right {
+    .ground>.left,
+    .right {
         min-height: 95vh;
         height: auto;
+    }
+
+    /*
+-------------
+Historien Bag 
+-------------
+*/
+    .boxPicture {
+        border-radius: 3px;
     }
 
 }
@@ -443,8 +547,9 @@ Navigationslinjen
 Tablet Layout
 --------------------------
 */
-@media screen and (max-width: 1274px){
-/*
+@media screen and (max-width: 1274px) {
+
+    /*
 -------------
 Navigationslinjen
 -------------
@@ -473,12 +578,13 @@ Navigationslinjen
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
     }
 
-/* 
+    /* 
 -------------
 Forside Øverste del
 -------------
 */
-    .ground, .water {
+    .ground,
+    .water {
         font-size: 16px;
         text-align: center;
     }
@@ -490,14 +596,15 @@ Forside Øverste del
     }
 
     .frontPicture {
-        border-radius: 0;        
+        border-radius: 0;
     }
 
     .text {
         padding: 0 100px;
     }
 
-    .left, .right {
+    .left,
+    .right {
         min-height: 40vh;
         width: 100%;
     }
@@ -513,9 +620,15 @@ Forside Øverste del
     .startText {
         width: 100%;
         min-height: 22vh;
-        gap: 0;
+        gap: 1;
     }
-/* 
+    
+    #failer {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    /* 
 -------------
 Forside anden del
 -------------
@@ -532,15 +645,12 @@ Forside anden del
         padding-bottom: 50px;
     }
 
+
 /* 
 -------------
 TrølleØllene valg af øl
 -------------
 */
-    #tøIndhold {
-        
-        }
-
     .hoveringOver:hover {
         scale: none;
         opacity: 1;
@@ -568,7 +678,8 @@ TrølleØllene valg af øl
         min-height: 170px;
     }
 
-    .direction a, .direction video{
+    .direction a,
+    .direction video {
         height: 170px;
     }
 
@@ -578,21 +689,65 @@ TrølleØllene valg af øl
 
 /* 
 -------------
+Øllene
+-------------
+*/
+    .ølLabelPicture {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .ølDel {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .leftØl {
+        width: 100%;
+    }
+
+    .rightØl {
+        margin-top: 30px;
+        width:100%;
+    }
+
+    .ølBox {
+        width: 60%;
+        padding: 20px;
+    }
+
+    /* 
+-------------
+Historien Bag
+-------------
+*/
+    .ftpDel {
+        padding-top: 30px;
+        flex-direction: column;
+    }
+
+    .HboDel {
+        padding-bottom: 50px;
+    }
+
+    /* 
+-------------
 Buttons
 -------------
 */
-.buttonSize {
-    margin-top: 10px;
-    font-size: 100%;
-}
+    .buttonSize {
+        margin-top: 10px;
+        font-size: 100%;
+    }
 
 
-/* 
+    /* 
 -------------
 Footer
 -------------
 */
-    .footerText, .logoBoxFooter {
+    .footerText,
+    .logoBoxFooter {
         width: 50%;
         text-align: center;
     }
@@ -610,21 +765,21 @@ Mobil Loyout
         width: 80%;
     }
 
-/* 
+    /* 
 -------------
 Main 
 -------------
 */
 
-.left {
-    width: 100%;
-}
+    .left {
+        width: 100%;
+    }
 
-.right {
-    width: 100%;
-}
+    .right {
+        width: 100%;
+    }
 
-/* 
+    /* 
 -------------
 Forside - Øverste del 
 -------------
@@ -640,14 +795,14 @@ Forside - Øverste del
     .ftpDel {
         flex-direction: column-reverse;
     }
-    
 
     .text {
         min-height: 400px;
         padding: 0 30px;
     }
 
-/*
+
+    /*
 -------------
 TrølleØllene
 -------------
@@ -679,18 +834,31 @@ TrølleØllene
         margin-bottom: 15px;
     }
 
+    .CRD {
+        flex-direction: column-reverse;
+    }
+
 /*
+-------------
+Øllene
+-------------
+*/
+    .ølBox {
+        width: 80%;
+    }
+
+    /*
 -------------
 Buttons
 -------------
 */
-.buttonSpace {
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    .buttonSpace {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
 
-/*
+    /*
 -------------
 Footer
 -------------

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- linket til mit stylesheet -->
+    <title>TrølleMock</title>
+    <!-- Titlen på siden (oppe i tab) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500&family=Mulish:wght@700&family=Shanti&display=swap"
+        rel="stylesheet">
+    <!-- Linket til Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div>
+            <a href="index.html"><img src="Logo/Joy selvtegnet.png" alt="" class="logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="TroelOellene.html">TrølleØllene</a></li>
+            <li><a href="fremtidigeProjekter.html">Fremtidige Projekter</a></li>
+            <li><a href="historienBag.html">Historien bag Trøjborg Bryg</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </nav>
+
+    <main id="tøIndhold">
+        <div class="ground tøTopIndhold ølInhold">
+            <div class="right text tøTopText">
+                <h3>Mocktail</h3>
+                <div class="streg"></div>
+                <h1><strong>TrølleMock</strong></h1>
+                <div class="streg"></div>
+                <img src="FremtigProjekter/Mocktail/Mocktail.png" alt="" class="ølLabelPicture">
+            </div>
+        </div>
+
+        <div class=" ølDel">
+            <div class="leftØl text">
+                <h2>Idé og baggrund</h2>
+                <p>Vi har udforsket meget i vores smage og varianter. Vi håber der er noget for alle næser og alle arrangementer.</p>
+            </div>
+            <div class="rightØl billedeFormat">
+                <img src="FremtigProjekter/Mocktail/Passion Fruit Cocktails.jpg" alt="" class="ølPicture">
+            </div>
+        </div>
+
+        <div class="ølBoxInfo">
+            <div class="ølBox ølDel">
+                <h3>Indhold</h3>
+                <p>Vi har valgt at indsætte disse smage til denne øl, for at den får denne utrolige skønne smag.</p>
+                <h3>NæringsIndhold</h3>
+                <p>Nærings indholdet i denne øl er meget højt grundet af vores sammensætning af citrus frugter. Det er den perfekte øl til at få de vitaminer man ikke får nok af.</p>
+                <h3>Vitaminer</h3>
+                <p>Vitamin D, Vitamin C, Vitamin B12</p>
+            </div>
+        </div>
+        
+        <div class="buttonSpace middleSpace">
+            <a href="fremtidigeProjekter.html" class="button btMain">Tilbage</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="logoBoxFooter">
+                <a href="index.html"><img src="Logo/Joy selvtegnet.png" alt="" class="logoFooter"></a>
+            </div>
+            <div class="social_media">
+                <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footerText">
+                <p>Adresse: Trøjborgvej 50, 8200 Aarhus</p>
+                <p>Telefon: +45 78 02 19 43</p>
+                <p>Mailadresse: bryg@trøjborg.dk</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', nav)
+    function nav(){
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.main-nav');
+        burger.addEventListener('click', ()=>{
+            nav.classList.toggle('show')
+        })
+    }
+</script>
+</html>
