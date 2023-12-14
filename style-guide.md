@@ -21,7 +21,7 @@ The designs were created to the following widths:
 - Dark blue (Hoved Knap): #07646B
 - Gul (Sub Knap): #E0C722
 - Orange (Line): #CD9023
-- Brun: #97633E
+- Brun: #7D5232
 
 ## Typography
 
