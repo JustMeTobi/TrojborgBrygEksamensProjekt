@@ -126,6 +126,7 @@ main {
     font-family: 'Shanti', sans-serif;
     background: var(--sort);
     text-align: center;
+    font-size: 18px;
 }
 
 /* 
@@ -149,6 +150,10 @@ h2 {
     font-size: 150%;
 }
 
+p {
+    font-size: 18px;
+}
+
 
 /* 
 ---------------------------------------------------
@@ -163,10 +168,6 @@ FORSIDE
     float: none;
     justify-content: center;
     align-items: center;
-}
-
-.ground p {
-    font-size: 18px;
 }
 
 .forsideVideo {
@@ -207,7 +208,6 @@ FORSIDE
 
 /* Anden del af forsiden */
 .water {
-    font-size: 20px;
     display: flex;
 }
 
@@ -352,7 +352,6 @@ TrølleØllene - Side 1
 .ølBox {
     display: flex;
     width: 50%;
-    font-size: 18px;
     flex-direction: column;
     padding: 30px 100px;
     background-color: var(--Brun);
@@ -549,6 +548,7 @@ Tablet Layout
 */
 @media screen and (max-width: 1274px) {
 
+
     /*
 -------------
 Navigationslinjen
@@ -565,9 +565,9 @@ Navigationslinjen
 
     .nav-links {
         position: fixed;
-        top: 7vh;
+        top: 65px;
         right: 0;
-        height: 30vh;
+        height: 250px;
         width: 40%;
         flex-direction: column;
         align-items: center;
@@ -716,6 +716,16 @@ TrølleØllene valg af øl
         padding: 20px;
     }
 
+/* 
+-------------
+Fremtidige Projekter
+-------------
+*/
+
+.MocktailEkstraPic {
+    display: none;
+}
+
     /* 
 -------------
 Historien Bag
@@ -723,7 +733,14 @@ Historien Bag
 */
     .ftpDel {
         padding-top: 30px;
+    }
+
+    .flexDireC {
         flex-direction: column;
+    }
+
+    .flexDireCR {
+        flex-direction: column-reverse;
     }
 
     .HboDel {
