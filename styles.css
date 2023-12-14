@@ -398,7 +398,9 @@ TrølleMock
 Historien bag Trøjborg Bryg
 ---------------------------------------------------
 */
-
+.logoHBO img{
+    width: 50%;
+}
 
 /*
 ---------------------------------------------------
@@ -456,7 +458,7 @@ Footer
 */
 footer {
     background: var(--Brun);
-    padding: 20px 0;
+    padding: 1px 0;
 }
 
 .footer_container {
@@ -464,9 +466,9 @@ footer {
     /* margin: auto; */
     padding: 0 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap-reverse;
+    /* flex-wrap: wrap-reverse; */
 }
 
 .logoFooter {
@@ -474,11 +476,14 @@ footer {
 }
 
 .logoBoxFooter {
-    width: 250px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social_media {
-    margin: 20px 150px;
+    margin: 20px 50px;
     display: flex;
     gap: 2rem;
 }
@@ -496,9 +501,9 @@ footer {
     transition: .8s;
 }
 
-.footerText {
-    width: 250px;
-}
+
+
+
 
 
 /* 
@@ -747,6 +752,11 @@ Historien Bag
         padding-bottom: 50px;
     }
 
+    .logoHBO img{
+        width: 30%;
+        margin-bottom: 30px;
+    }
+
     /* 
 -------------
 Buttons
@@ -763,10 +773,8 @@ Buttons
 Footer
 -------------
 */
-    .footerText,
-    .logoBoxFooter {
-        width: 50%;
-        text-align: center;
+    .footer_container {
+        margin: 20px 0;
     }
 
 }
@@ -882,9 +890,14 @@ Footer
 */
     .footer_container {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .social_media {
         gap: 5rem;
+    }
+
+    .footerText {
+        text-align: left;
     }
 }
