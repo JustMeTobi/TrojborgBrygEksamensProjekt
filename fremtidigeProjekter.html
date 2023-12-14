@@ -16,6 +16,16 @@
     <!-- Linket til Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="Logo/Favicon/favicon.ico">
+    <script>
+        document.addEventListener('DOMContentLoaded', nav)
+        function nav() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.main-nav');
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('show')
+            })
+        }
+    </script>
 </head>
 
 <body>
@@ -117,14 +127,4 @@
         </div>
     </footer>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', nav)
-    function nav(){
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.main-nav');
-        burger.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-</script>
 </html>

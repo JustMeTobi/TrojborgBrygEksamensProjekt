@@ -17,6 +17,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="Logo/Favicon/favicon.ico">
+    <script>
+        document.addEventListener('DOMContentLoaded', nav)
+        function nav() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.main-nav');
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('show')
+            })
+        }
+    </script>
 </head>
 
 <body>
@@ -37,7 +47,7 @@
         </div>
     </nav>
 
-    <main id="tøIndhold">
+    <main>
         <div class="ground tøTopIndhold ølInhold">
             <div class="right text tøTopText">
                 <h3>Mocktail</h3>
@@ -52,19 +62,24 @@
             <div class="leftØl text">
                 <h2>Idé og baggrund</h2>
                 <p>En af vores idéer til en Mocktail er denne "Passion Bliss" Mocktail</p>
-                <p>Historien bag "Passion Bliss" Mocktail begynder i en tropisk oase, hvor solen kysser sandet og havet synger sin stille sang. En lokal frugtbonde, inspireret af de frodige passionsfrugter, der danser i vinden, beslutter sig for at skabe en forfriskende og sanselig mocktail. Denne mocktail bliver en hyldest til øens naturlige skatte og den lyksalighed, der opstår ved at nyde en perfekt blanding af tropiske smagsoplevelser.</p>
+                <p>Historien bag "Passion Bliss" Mocktail begynder i en tropisk oase, hvor solen kysser sandet og havet
+                    synger sin stille sang. En lokal frugtbonde, inspireret af de frodige passionsfrugter, der danser i
+                    vinden, beslutter sig for at skabe en forfriskende og sanselig mocktail. Denne mocktail bliver en
+                    hyldest til øens naturlige skatte og den lyksalighed, der opstår ved at nyde en perfekt blanding af
+                    tropiske smagsoplevelser.</p>
                 <h2>Baggrund for dyret på øllen</h2>
                 <p>Der er endnu ikke noget fastsat dyr til denne Mocktail. Men den vil komme.</p>
             </div>
             <div class="rightØl billedeFormat">
-                <img src="FremtigProjekter/Mocktail/PassionFruitCocktails.jpg" alt="Passionsfrugts Mocktail" class="ølPicture">
+                <img src="FremtigProjekter/Mocktail/PassionFruitCocktails.jpg" alt="Passionsfrugts Mocktail"
+                    class="ølPicture">
             </div>
         </div>
 
         <div class="ølBoxInfo">
             <div class="ølBox ølDel">
                 <h3>Indhold</h3>
-                <p>1 dl passionsfrugtpuré, 
+                <p>1 dl passionsfrugtpuré,
                     1/2 dl ananasjuice,
                     1/2 dl kokosvand,
                     Friskpresset saft fra en lime,
@@ -83,7 +98,7 @@
                 <p>Vitamin C, Vitamin A og Kalium</p>
             </div>
         </div>
-        
+
         <div class="buttonSpace middleSpace">
             <a href="fremtidigeProjekter.html" class="button btMain">Tilbage</a>
         </div>
@@ -107,14 +122,5 @@
         </div>
     </footer>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', nav)
-    function nav(){
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.main-nav');
-        burger.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-</script>
+
 </html>

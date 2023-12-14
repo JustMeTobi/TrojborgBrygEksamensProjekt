@@ -17,6 +17,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="Logo/Favicon/favicon.ico">
+    <script>
+        document.addEventListener('DOMContentLoaded', nav)
+        function nav() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.main-nav');
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('show')
+            })
+        }
+    </script>
 </head>
 
 <body>
@@ -38,7 +48,7 @@
     </nav>
 
     <main id="tøIndhold">
-        
+
         <div class="ground tøTopIndhold">
             <video autoplay muted loop>
                 <source src="TrølleØllene/ØlDerBruser.mp4" type="video/mp4">
@@ -48,11 +58,12 @@
                 <h2>Vores udvalg af smage er småt (men godt!)</h2>
                 <p>Vi har lagt særlig meget vægt på at ramme de bedste, mest eftersøgte smage udfra vores kunder.</p>
                 <p>Vi er altid under udvikling efter at skabe nye og forbedre vores nuværende smage.</p>
-                <p>Vil du læse mere omkring vores idé til nye smage og produkter, kan du læse mere <a href="fremtidigeProjekter.html" class="textLink">her</a></p>
+                <p>Vil du læse mere omkring vores idé til nye smage og produkter, kan du læse mere <a
+                        href="fremtidigeProjekter.html" class="textLink">her</a></p>
             </div>
         </div>
 
-        <div id="tøIndhold" class="BGBrun">
+        <div class="tøIndholdBox BGBrun">
             <div class="direction">
                 <a href="LoungeLilypad.html" class="boxPicture hoveringOver">
                     <img src="Labels/LoungeLilypad/FrogOnLillypadLABEL.png" alt="LoungeLilypadLabel">
@@ -107,15 +118,7 @@
             </div>
         </div>
     </footer>
+    
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', nav)
-    function nav(){
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.main-nav');
-        burger.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-</script>
+
 </html>
