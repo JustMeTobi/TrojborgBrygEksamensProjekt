@@ -55,22 +55,28 @@ Navigations linjen
 }
 
 .logo:hover {
-    -webkit-animation:spin 2s linear infinite;
-    -moz-animation:spin 2s linear infinite;
-    animation:spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
 }
 
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); } 
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
 }
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); } 
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
-@keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-        transform:rotate(360deg); 
-    } 
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 .nav-links {
@@ -204,7 +210,7 @@ FORSIDE
 
 .startText {
     padding: 50px;
-} 
+}
 
 /* Anden del af forsiden */
 .water {
@@ -340,6 +346,7 @@ TrølleØllene - Side 1
     font-size: 18px;
     padding: 0 50px;
 }
+
 .rightØl {
     width: 50%;
 }
@@ -381,24 +388,10 @@ TrølleØllene - Side 1
 
 /* 
 ---------------------------------------------------
-Fremtidige Projekter
----------------------------------------------------
-*/
-
-/* 
--------------------------
-TrølleMock
--------------------------
-*/
-
-
-
-/* 
----------------------------------------------------
 Historien bag Trøjborg Bryg
 ---------------------------------------------------
 */
-.logoHBO img{
+.logoHBO img {
     width: 50%;
 }
 
@@ -460,17 +453,14 @@ footer {
     background: var(--Brun);
     padding: 1px 0;
     font-family: 'Shanti', sans-serif;
-    margin: 20px 0;
 }
 
 .footer_container {
-    /* max-width: 1300px; */
-    /* margin: auto; */
+    margin: 20px 0;
     padding: 0 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* flex-wrap: wrap-reverse; */
 }
 
 .logoFooter {
@@ -502,11 +492,6 @@ footer {
     scale: 1.5;
     transition: .8s;
 }
-
-
-
-
-
 
 /* 
 ---------------------------------------------------
@@ -629,7 +614,7 @@ Forside Øverste del
         min-height: 22vh;
         gap: 1;
     }
-    
+
     #failer {
         flex-direction: column;
         padding-top: 50px;
@@ -653,7 +638,7 @@ Forside anden del
     }
 
 
-/* 
+    /* 
 -------------
 TrølleØllene valg af øl
 -------------
@@ -694,7 +679,7 @@ TrølleØllene valg af øl
         height: 170px;
     }
 
-/* 
+    /* 
 -------------
 Øllene
 -------------
@@ -715,7 +700,7 @@ TrølleØllene valg af øl
 
     .rightØl {
         margin-top: 30px;
-        width:100%;
+        width: 100%;
     }
 
     .ølBox {
@@ -723,15 +708,15 @@ TrølleØllene valg af øl
         padding: 20px;
     }
 
-/* 
+    /* 
 -------------
 Fremtidige Projekter
 -------------
 */
 
-.MocktailEkstraPic {
-    display: none;
-}
+    .MocktailEkstraPic {
+        display: none;
+    }
 
     /* 
 -------------
@@ -754,7 +739,7 @@ Historien Bag
         padding-bottom: 50px;
     }
 
-    .logoHBO img{
+    .logoHBO img {
         width: 30%;
         margin-bottom: 30px;
     }
@@ -865,7 +850,7 @@ TrølleØllene
         flex-direction: column-reverse;
     }
 
-/*
+    /*
 -------------
 Øllene
 -------------
