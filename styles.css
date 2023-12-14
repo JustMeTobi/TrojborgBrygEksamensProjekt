@@ -459,6 +459,8 @@ Footer
 footer {
     background: var(--Brun);
     padding: 1px 0;
+    font-family: 'Shanti', sans-serif;
+    margin: 20px 0;
 }
 
 .footer_container {
